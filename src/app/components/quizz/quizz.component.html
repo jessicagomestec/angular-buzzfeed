@@ -1,0 +1,22 @@
+<div class="quizz__container">
+  <div class="quizz_logo">
+    <img src="assets/img/logo.png" alt="">
+    <h3>{{quizzService.title}}</h3>
+
+  </div>
+
+  <div *ngIf="!quizzService.finished">
+    <app-quizz-questions></app-quizz-questions>
+    <app-quizz-options></app-quizz-options>
+  </div>
+
+
+<div *ngIf="quizzService.finished">
+  <app-quizz-results></app-quizz-results>
+</div>
+
+<div class="quizz_button">
+  <button class="btn-option" (click)="resetQuiz()">Reiniciar</button>
+</div>
+
+</div>

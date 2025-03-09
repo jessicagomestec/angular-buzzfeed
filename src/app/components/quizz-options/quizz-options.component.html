@@ -1,0 +1,9 @@
+
+
+
+
+  <div class="quizz__container" *ngIf="quizzService.getCurrentQuestion() as question">
+    <div class="quizz_options" *ngFor="let option of question.options">
+      <button class="btn-option" (click)="chooseOption(option.alias)">{{ option.name }}</button>
+    </div>
+  </div>
